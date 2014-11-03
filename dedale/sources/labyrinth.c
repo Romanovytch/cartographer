@@ -5,7 +5,7 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Fri Oct 17 11:50:33 2014 Florian Givernaud
-** Last update Tue Oct 28 15:44:39 2014 Florian Givernaud
+** Last update Mon Nov  3 13:29:32 2014 Florian Givernaud
 */
 
 #include <stdlib.h>
@@ -77,16 +77,16 @@ void	make_labyrinth(int size)
 {
   int	**murs_v;
   int	**murs_h;
-  int	**tab;
+  int	**laby;
 
-  init_walls(&murs_v, (size - 1), size);
-  init_walls(&murs_h, size, (size - 1));
-  init_labyrinth(&tab, size);
+  init_walls(&murs_v, size, (size - 1));
+  init_walls(&murs_h, (size - 1), size);
+  init_labyrinth(&laby, size);
 
-  select_wall(&murs_v, &murs_h, size);
+  select_wall(&murs_v, &murs_h, &laby, size);
   disp_labyrinth(murs_v, murs_h, size);
 
-  free_labyrinth(&murs_v, size - 1);
-  free_labyrinth(&murs_h, size);
-  free_labyrinth(&tab, size);
+  free_labyrinth(&murs_v, size);
+  free_labyrinth(&murs_h, (size - 1));
+  free_labyrinth(&laby, size);
 }

@@ -5,7 +5,7 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Tue Oct 28 14:40:10 2014 Florian Givernaud
-** Last update Tue Oct 28 15:33:36 2014 Florian Givernaud
+** Last update Thu Oct 30 17:51:15 2014 Florian Givernaud
 */
 
 #ifndef DEDALE_H_
@@ -16,7 +16,7 @@
 
 void	disp_labyrinth(int **, int **, int);
 void	make_labyrinth(int);
-void	select_wall(int ***, int ***, int);
+void	select_wall(int ***, int ***, int ***, int);
 void	my_putchar(char);
 void	my_putstr(char *);
 int	my_getnbr(char *);

@@ -5,7 +5,7 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Tue Oct 28 11:27:04 2014 Florian Givernaud
-** Last update Tue Oct 28 15:41:04 2014 Florian Givernaud
+** Last update Mon Nov  3 13:22:48 2014 Florian Givernaud
 */
 
 #include "../includes/dedale.h"
@@ -18,7 +18,7 @@ static void	horizontal_wall(int **murs_h, int size, int i)
   my_putchar('X');
   while (j < size)
     {
-      if (murs_h[j][i] == CLOSE)
+      if (murs_h[i][j] == CLOSE)
 	my_putchar('X');
       else
 	my_putchar(' ');
@@ -37,7 +37,7 @@ static void	vertical_wall(int **murs_v, int size, int i)
   my_putchar(' ');
   while (j < (size - 1))
     {
-      if (murs_v[j][i] == CLOSE)
+      if (murs_v[i][j] == CLOSE)
 	my_putchar('X');
       else
 	my_putchar(' ');
@@ -48,14 +48,17 @@ static void	vertical_wall(int **murs_v, int size, int i)
   my_putchar('\n');
 }
 
-static void	draw_line(int size)
+static void	draw_line(int size, int x)
 {
   int		i;
 
   i = 0;
   while (i < (size + size + 1))
     {
-      my_putchar('X');
+      if (i != (x * 2 + 1))
+	my_putchar('X');
+      else
+	my_putchar(' ');
       ++i;
     }
   my_putchar('\n');
@@ -64,9 +67,11 @@ static void	draw_line(int size)
 void	disp_labyrinth(int **murs_v, int **murs_h, int size)
 {
   int	i;
+  int	number;
 
   i = 0;
-  draw_line(size);
+  number = in_out(murs_h, size);
+  draw_line(size, number);
   while (i < size)
     {
       vertical_wall(murs_v, size, i);
@@ -74,5 +79,5 @@ void	disp_labyrinth(int **murs_v, int **murs_h, int size)
 	horizontal_wall(murs_h, size, i);
       ++i;
     }
-  draw_line(size);
+  draw_line(size, (size + size + 1));
 }

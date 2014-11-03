@@ -5,15 +5,23 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Fri Oct 17 11:22:26 2014 Florian Givernaud
-** Last update Tue Oct 28 15:31:49 2014 Florian Givernaud
+** Last update Mon Nov  3 13:31:15 2014 Florian Givernaud
 */
 
 #include <stdlib.h>
 #include "../includes/dedale.h"
 
-int	check_args(int argc, char **argv)
+int	is_pair(int nb)
 {
-  int	number;
+  if (nb % 2 == 0)
+    return (0);
+  else
+    return (1);
+}
+
+static int	check_args(int argc, char **argv)
+{
+  int		number;
 
   number = 0;
   if (argc < 2)
@@ -30,6 +38,11 @@ int	check_args(int argc, char **argv)
   if (number > 29)
     {
       my_putstr("The size of the labyrinth must be inferior to 29\n");
+      return (0);
+    }
+  if (is_pair(number) == 0)
+    {
+      my_putstr("The size of the labyrinth must be impair.\n");
       return (0);
     }
   return (number);
