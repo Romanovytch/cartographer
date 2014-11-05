@@ -5,7 +5,7 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Fri Oct 17 11:22:26 2014 Florian Givernaud
-** Last update Mon Nov  3 13:31:15 2014 Florian Givernaud
+** Last update Wed Nov  5 15:36:09 2014 Florian Givernaud
 */
 
 #include <stdlib.h>
@@ -55,6 +55,6 @@ int	main(int argc, char **argv)
 
   if ((size = check_args(argc, argv)) == 0)
     return (0);
-  make_labyrinth(size);
+  make_labyrinth(size / 2);
   return (0);
 }

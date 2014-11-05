@@ -5,7 +5,7 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Tue Oct 28 11:27:04 2014 Florian Givernaud
-** Last update Mon Nov  3 13:22:48 2014 Florian Givernaud
+** Last update Wed Nov  5 16:16:55 2014 Florian Givernaud
 */
 
 #include "../includes/dedale.h"
@@ -22,7 +22,10 @@ static void	horizontal_wall(int **murs_h, int size, int i)
 	my_putchar('X');
       else
 	my_putchar(' ');
-      my_putchar('X');
+      if ((i == size / 2 - 1) && (j == size / 2 - 1))
+	my_putchar(' ');
+      else
+	my_putchar('X');
       ++j;
     }
   my_putchar ('\n');
