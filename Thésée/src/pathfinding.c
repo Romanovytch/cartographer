@@ -5,14 +5,17 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Wed Oct 22 15:30:24 2014 kettan_s
-** Last update Wed Nov  5 12:27:31 2014 kettan_s
+** Last update Wed Nov  5 15:21:50 2014 Florian Givernaud
 */
 
 #include <stdlib.h>
 #include "thesee.h"
 
+#include <stdio.h>
+
 int	pathfinding(char ***map, t_pos dst, int x, int y)
 {
+  printf("Coord = (%d;%d)\n", x, y);
   if (x == dst.x && y == dst.y)
     return (1);
   if ((*map)[y][x] == 'X' || (*map)[y][x] == '*')

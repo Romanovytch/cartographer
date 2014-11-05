@@ -5,12 +5,12 @@
 ## Login   <givern_f@epitech.net>
 ## 
 ## Started on  Tue Oct 28 10:20:49 2014 Florian Givernaud
-## Last update Mon Nov  3 13:43:03 2014 Florian Givernaud
+## Last update Tue Nov  4 09:16:58 2014 Florian Givernaud
 ##
 
 NAME	=	bin/dedale
 
-CFLAGS	=	-Wall -Wextra -Werror -g
+CFLAGS	=	-Wall -Wextra -Werror
 
 SRC	=	sources/main.c \
 		sources/labyrinth.c \
@@ -23,8 +23,8 @@ SRC	=	sources/main.c \
 
 OBJ	=	$(SRC:.c=.o)
 
-$(NAME)	: $(OBJ) $(CFLAGS)
-		cc -o $(NAME) $(OBJ) 
+$(NAME)	: $(OBJ)
+		cc -o $(NAME) $(OBJ) $(CFLAGS) 
 
 all	: $(NAME)
 

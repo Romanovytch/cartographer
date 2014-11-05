@@ -5,7 +5,7 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Tue Oct 28 14:40:10 2014 Florian Givernaud
-** Last update Thu Oct 30 17:51:15 2014 Florian Givernaud
+** Last update Tue Nov  4 09:16:10 2014 Florian Givernaud
 */
 
 #ifndef DEDALE_H_
@@ -21,5 +21,6 @@ void	my_putchar(char);
 void	my_putstr(char *);
 int	my_getnbr(char *);
 void	my_put_nbr(int);
+int	in_out(int **, int);
 
 #endif /* !DEDALE_H_ */

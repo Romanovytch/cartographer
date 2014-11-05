@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Wed Oct 22 17:14:50 2014 kettan_s
-** Last update Sun Nov  2 03:10:43 2014 kettan_s
+** Last update Wed Nov  5 15:16:46 2014 Florian Givernaud
 */
 
 #include <stdlib.h>
@@ -40,7 +40,7 @@ t_pos	get_pos_center(char **map)
 {
   t_pos	ct;
 
-  ct.x = my_strlen(map[0]) / 2 + 1;
+  ct.x = my_strlen(map[0]) / 2;
   ct.y = ct.x;
   return (ct);
 }
