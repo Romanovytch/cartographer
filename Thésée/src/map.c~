@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Tue Oct 21 13:37:49 2014 kettan_s
-** Last update Wed Nov  5 12:44:18 2014 kettan_s
+** Last update Wed Nov  5 12:32:00 2014 kettan_s
 */
 
 #include <sys/types.h>
@@ -53,11 +53,9 @@ void	print_map(char **map)
       while (map[y][x])
 	{
 	  if (map[y][x] == '*')
-	    print_color("\x1b[42;30m", map[y][x]);
+	    print_color("\x1b[32m", map[y][x]);
 	  else if (map[y][x] == 'T' || map[y][x] == 'C')
-	    print_color("\x1b[41;37m", map[y][x]);
-	  /* else if (map[y][x] == 'X') */
-	  /*   print_color("\x1b[47;30;6m", map[y][x]); */
+	    print_color("\x1b[31m", map[y][x]);
 	  else
 	    my_putchar(map[y][x]);
 	  ++x;
