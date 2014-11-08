@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Tue Oct 21 13:37:49 2014 kettan_s
-** Last update Thu Nov  6 13:36:22 2014 Florian Givernaud
+** Last update Sat Nov  8 13:27:13 2014 kettan_s
 */
 
 #include <sys/types.h>
@@ -21,16 +21,23 @@ char	**fill_map(char *path)
   int	fd;
   int	i;
 
-  if ((fd = open(path, O_RDONLY)) == -1)
-    exit(EXIT_FAILURE);
+  if (path != NULL)
+    {
+      if ((fd = open(path, O_RDONLY)) == -1)
+	{
+	  my_putstr("Error : open() failed to open ");
+	  my_putstr(path);
+	  my_putchar('\n');
+	  exit(EXIT_FAILURE);
+	}
+    }
+  else
+    fd = 0;
   i = 0;
   size = 29;
   map = malloc(sizeof(char *) * size + 1);
   while (i < size)
-    {
-      map[i] = get_next_line(fd);
-      ++i;
-    }
+    map[i++] = get_next_line(fd);
   return (map);
 }
 
@@ -56,8 +63,6 @@ void	print_map(char **map)
 	    print_color("\x1b[42;30m", map[y][x]);
 	  else if (map[y][x] == 'T' || map[y][x] == 'C')
 	    print_color("\x1b[41;37m", map[y][x]);
-	  /* else if (map[y][x] == 'X') */
-	  /*   print_color("\x1b[47;30;6m", map[y][x]); */
 	  else
 	    my_putchar(map[y][x]);
 	  ++x;

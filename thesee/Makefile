@@ -5,7 +5,7 @@
 ## Login   <kettan_s@epitech.net>
 ## 
 ## Started on  Wed Oct  1 07:26:08 2014 kettan_s
-## Last update Tue Nov  4 09:39:52 2014 kettan_s
+## Last update Sat Nov  8 12:13:23 2014 kettan_s
 ##
 
 SRC	=	src/main.c		\
@@ -15,18 +15,11 @@ SRC	=	src/main.c		\
 		src/my_strlen.c		\
 		src/my_strcmp.c		\
 		src/my_putnbr_base.c	\
-		src/my_getnbr.c		\
 		src/get_next_line.c	\
-		src/create_word_tab.c	\
-		src/my_dtablen.c	\
 		src/thesee.c		\
 		src/map.c		\
 		src/pos.c		\
 		src/pathfinding.c	\
-		src/node.c		\
-		src/push.c		\
-		src/pop.c		\
-		src/heuristic.c
 
 NAME	=	thesee
 
