@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Tue Oct 21 13:37:49 2014 kettan_s
-** Last update Sun Nov  9 15:00:50 2014 Florian Givernaud
+** Last update Sun Nov  9 17:36:54 2014 kettan_s
 */
 
 #include <sys/types.h>
@@ -13,6 +13,19 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include "thesee.h"
+
+void	empty_map(char **map)
+{
+  int	i;
+
+  i = 0;
+  while (map[i])
+    {
+      free(map[i]);
+      ++i;
+    }
+  free(map);
+}
 
 char	**fill_map(char *path)
 {

@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Sat Nov  8 13:57:06 2014 kettan_s
-** Last update Sun Nov  9 01:07:51 2014 kettan_s
+** Last update Sun Nov  9 15:27:25 2014 kettan_s
 */
 
 #include "minotaure.h"
@@ -25,6 +25,6 @@ void	minotaure(char *file)
   pathfinding(&map, exit, t, '1');
   map[m.y][m.x] = 'M';
   map[t.y][t.x] = 'C';
-  map[exit.y][exit.x] = 'T';
+  map[exit.y][exit.x] = '*';
   print_map(map);
 }

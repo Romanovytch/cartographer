@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Tue Oct 21 13:24:11 2014 kettan_s
-** Last update Wed Nov  5 12:04:14 2014 kettan_s
+** Last update Sun Nov  9 17:37:46 2014 kettan_s
 */
 
 #ifndef THESEE_H_
@@ -61,6 +61,7 @@ void			thesee(char *);
 
 char			**fill_map(char *);
 void			print_map(char **);
+void			empty_map(char **);
 
 /*
 **			pos.c

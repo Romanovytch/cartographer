@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Tue Oct 21 13:29:23 2014 kettan_s
-** Last update Sun Nov  9 17:37:17 2014 kettan_s
+** Last update Wed Nov  5 12:32:30 2014 kettan_s
 */
 
 #include "thesee.h"
@@ -23,5 +23,4 @@ void	thesee(char *file)
   map[center.y][center.x] = 'C';
   map[exit.y][exit.x] = 'T';
   print_map(map);
-  empty_map(map);
 }
