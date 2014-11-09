@@ -5,7 +5,7 @@
 ** Login   <kettan_s@epitech.net>
 ** 
 ** Started on  Fri Sep 26 12:48:52 2014 kettan_s
-** Last update Sun Nov  9 00:07:59 2014 kettan_s
+** Last update Sun Nov  9 15:04:04 2014 Florian Givernaud
 */
 
 #include <stdlib.h>

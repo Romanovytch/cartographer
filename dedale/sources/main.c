@@ -5,19 +5,11 @@
 ** Login   <givern_f@epitech.net>
 ** 
 ** Started on  Fri Oct 17 11:22:26 2014 Florian Givernaud
-** Last update Thu Nov  6 13:40:40 2014 Florian Givernaud
+** Last update Sun Nov  9 14:53:44 2014 Florian Givernaud
 */
 
 #include <stdlib.h>
 #include "../includes/dedale.h"
-
-int	is_pair(int nb)
-{
-  if (nb % 2 == 0)
-    return (0);
-  else
-    return (1);
-}
 
 static int	check_args(int argc, char **argv)
 {

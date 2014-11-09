@@ -5,21 +5,24 @@
 ## Login   <givern_f@epitech.net>
 ## 
 ## Started on  Tue Oct 28 10:20:49 2014 Florian Givernaud
-## Last update Tue Nov  4 09:16:58 2014 Florian Givernaud
+## Last update Sun Nov  9 14:57:46 2014 Florian Givernaud
 ##
 
-NAME	=	bin/dedale
+NAME	=	dedale
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-W -Wall -Wextra -Werror -ansi -pedantic
 
 SRC	=	sources/main.c \
+		sources/init.c \
 		sources/labyrinth.c \
 		sources/display.c \
+		sources/walls.c \
 		sources/select_wall.c \
-		sources/in_out.c \
+		sources/path.c \
 		sources/lib/my_getnbr.c \
 		sources/lib/my_put_nbr.c \
-		sources/lib/my_putstr.c
+		sources/lib/my_putstr.c \
+		sources/lib/is_pair.c
 
 OBJ	=	$(SRC:.c=.o)
 

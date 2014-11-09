@@ -5,7 +5,7 @@
 ## Login   <kettan_s@epitech.net>
 ## 
 ## Started on  Wed Oct  1 07:26:08 2014 kettan_s
-## Last update Sat Nov  8 12:13:23 2014 kettan_s
+## Last update Sun Nov  9 14:59:11 2014 Florian Givernaud
 ##
 
 SRC	=	src/main.c		\
